@@ -1,0 +1,25 @@
+{
+    "name": "nas",
+    "displayName": "Autostock-SyntaxHighlighter",
+    "description": "Highlight autostock script codes",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "nas",
+            "aliases": ["Autostock", "nas"],
+            "extensions": ["nas"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "nas",
+            "scopeName": "source.autostock",
+            "path": "./syntaxes/nas.tmLanguage.json"
+        }]
+    }
+}

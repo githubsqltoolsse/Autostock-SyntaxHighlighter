@@ -1,0 +1,55 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Autostock-Syntaxhighlighter",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+			{
+				"name": "keyword.control.nas",
+				"match": "\\b(?i)(LLV|LLVBARS|HHV|HHVBARS|GapUp|GapDown|TOP|TOPBARS|BOTTOM|BOTTOMBARS|UPSTEPS|UPSTEPSBARS|DOWNSTEPS|DOWNSTEPSBARS|REF|AREF|CmpRef|Rev|Find|Loop|Const|FIB|TREND|Draw|SupRes|CROSS|DynTrend|ATAN|STDEV|Freq|Skew|Median|MedianBars|LinReg|R2|DayOfWeek|DayOfMonth|MonthNumber|YearNumber|Date|XTIME|POWER|LOG|EXP|LOG10|MN|MX|SUM|SUMW|CUM)\\b"
+			},
+			{
+				"name": "keyword.other.nas",
+				"match": "\\b(?i)(ATR|ATREx|BolBands|DX|DXEx|MACD|MACD2|MDI|MDIEx|MFI|MFIEx|MOV|EMA|AMA|WILD|MMovDI|MMovX|MMovRes|MO|MOEx|OBV|OSCP|OSCV|OSC|OSCPROC|PDI|PDIEx|ROC|RSI|RSIW|RSIWS|SAR|SAR2|STOCH|STOCHEx|STOCBlockSize|RoundBlock|Portfolio|Market|Cash|LastTrade|OMinfo|RoundPrice|BLOCKSIZE|CRCID|GETGVAR|GETVAL|RETVAL|RSIEX|RSIWEX|RSIWSEX|SCRPAR|STOC|SETGVARIF|SETGVARIFGUI|SETINIIF|GETINI|Odepth)\\b"
+			}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+				"name":"comment.block.nas",
+				"begin": "{",
+				"end": "}"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+				"name": "constant.character.nas",
+				"match": "\\b(?i)(C|B|S|H|L|O|V)\\b"
+				},
+				{
+				"name": "constant.language.nas",
+				"match": "\\b(?i)(NOT|AND|OR|XOR|EQV|IF|GT|GE|LT|LE|ABS|INT|FRAC|ADD|SUB|MULT|DIV|MOD|SQRT)\\b"
+				},
+				{
+				"name": "constant.numeric",
+				"match": "\\b[0-9]+[.]?[0-9]*\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.autostock"
+}
